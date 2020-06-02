@@ -1,0 +1,4 @@
+browserkey = webdriver.chrome.driver
+chromebrowser = C:\\Users\\lenovo\\eclipse-workspace\\TestInTwoTive\\src\\main\\resources\\chromedriver83.exe
+Firefoxbrowser = C:\\Users\\lenovo\\eclipse-workspace\\HealthGraph\\src\\main\\resources\\geckodriver.exe
+url = https://qa-test.in2tive.ai/
