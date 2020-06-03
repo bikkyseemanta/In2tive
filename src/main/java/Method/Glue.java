@@ -59,5 +59,33 @@ public class Glue extends  CommonMethod
 		}
 	   
 	}
+	
+	@When("^user fill five to \"([^\"]*)\" text box$")
+	public void user_fill_five_to_text_box(String input) throws Throwable {
+		driver.findElement(By.xpath("//*[@placeholder='Enter an integer']")).sendKeys(input);
+		
+	}
+
+	@Then("^the facrioal sholuld be calculate properly$")
+	public void the_facrioal_sholuld_be_calculate_properly() throws Throwable {
+		expwait("//*[contains(text(),'The factorial of 5 is: 120')]");
+	   String factorial=driver.findElement(By.xpath("//*[contains(text(),'The factorial of 5 is: 120')]")).getText();
+	   if(factorial.contains("120"))
+	   {
+		   Reporter.addStepLog("Factorial of 5 is calculated correctly-->SUCCESS");
+	   }
+	   else
+	   {
+		   Reporter.addStepLog("Factorial of 5 is not calculated correctly-->DEFECT");
+	   }
+	}
+	
+	@Then("^close the browser$")
+	public void close_the_browser() throws Throwable {
+	    driver.close();
+	}
+
+
+
 
 }

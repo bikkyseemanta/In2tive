@@ -16,7 +16,7 @@ import cucumber.api.junit.Cucumber;
 		strict = true,
 		 format =
 		 {"com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
-		tags = { "@Validate_Red_From_Validation_Styling" })
+		tags = { "@Validate_Red_From_Validation_Styling,@Validate_factorial_of_five" })
 
 
 public class Runner {
